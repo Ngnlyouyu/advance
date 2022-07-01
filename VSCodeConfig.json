@@ -1,0 +1,37 @@
+{
+    "terminal.integrated.fontSize": 18,
+    "editor.fontSize": 20,
+    "editor.formatOnSave": true,
+    "go.formatTool": "goformat",
+    "go.useCodeSnippetsOnFunctionSuggest": true,
+    "go.useCodeSnippetsOnFunctionSuggestWithoutType": true,
+    "go.autocompleteUnimportedPackages": true,
+    "go.docsTool": "gogetdoc",
+    "go.toolsManagement.autoUpdate": true,
+    "[go]": {
+        "editor.insertSpaces": true,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+        "editor.suggest.snippetsPreventQuickSuggestions": false
+    },
+    "editor.renderWhitespace": "all",
+    "go.gotoSymbol.includeImports": true,
+    "editor.detectIndentation": false,
+    "gopls": {
+        "experimentalWorkspaceModule": true
+    },
+    "files.eol": "\n",
+    "explorer.compactFolders": false,
+    "eslint.format.enable": true,
+    "[python]": {
+        "editor.formatOnSave": true,
+        // "editor.defaultFormatter": "ms-python.python"
+    },
+    "[javascript]": {
+        "editor.tabSize": 2,
+        "editor.formatOnSave": true,
+    },
+    "python.formatting.provider": "yapf",
+}
