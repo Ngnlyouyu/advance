@@ -2,7 +2,7 @@
     "terminal.integrated.fontSize": 18,
     "editor.fontSize": 20,
     "editor.formatOnSave": true,
-    "go.formatTool": "goformat",
+    "go.formatTool": "gofmt",
     "go.useCodeSnippetsOnFunctionSuggest": true,
     "go.useCodeSnippetsOnFunctionSuggestWithoutType": true,
     "go.autocompleteUnimportedPackages": true,
@@ -26,12 +26,11 @@
     "explorer.compactFolders": false,
     "eslint.format.enable": true,
     "[python]": {
-        "editor.formatOnSave": true,
-        // "editor.defaultFormatter": "ms-python.python"
+        "editor.formatOnSave": true
     },
     "[javascript]": {
         "editor.tabSize": 2,
-        "editor.formatOnSave": true,
+        "editor.formatOnSave": true
     },
-    "python.formatting.provider": "yapf",
+    "python.formatting.provider": "yapf"
 }
