@@ -1,0 +1,141 @@
+# golangci-lint version: 1.52.2
+
+run:
+  timeout: 15m
+linters:
+  disable-all: true
+  enable:
+    - errcheck
+    - gosimple
+    - gofmt
+    - govet
+    - ineffassign
+    - staticcheck
+    - unused
+    - gosec
+    - stylecheck
+    - unconvert
+    - bodyclose
+    - gocritic
+    - goimports
+    - misspell
+    - rowserrcheck
+    - typecheck
+    - goconst
+    - gocyclo
+    - revive
+
+linters-settings:
+  govet:
+    enable:
+      - nilness
+  staticcheck:
+    checks: ["all"]
+  stylecheck:
+    checks:
+      - ST1005 # Incorrectly formatted error string
+      - ST1019 # Importing the same package multiple times.
+  gosec:
+    severity: "low"
+    confidence: "low"
+    excludes:
+      - G101
+      - G501
+      - G401
+      - G402
+      - G107
+      - G306
+  gocyclo:
+    min-complexity: 30
+  gocritic:
+    enabled-checks:
+      - appendCombine
+      - argOrder
+      - assignOp
+      - badCond
+      - boolExprSimplify
+      - builtinShadow
+      - captLocal
+      - caseOrder
+      - codegenComment
+      - commentedOutImport
+      - defaultCaseOrder
+      - deprecatedComment
+      - docStub
+      - dupArg
+      - dupBranchBody
+      - dupCase
+      - dupSubExpr
+      - elseif
+      - emptyFallthrough
+      - equalFold
+      - flagDeref
+      - flagName
+      - hexLiteral
+      - indexAlloc
+      - initClause
+      - methodExprCall
+      - nilValReturn
+      - offBy1
+      - rangeExprCopy
+      - regexpMust
+      - sloppyLen
+      - stringXbytes
+      - switchTrue
+      - typeAssertChain
+      - typeSwitchVar
+      - typeUnparen
+      - underef
+      - unlambda
+      - unnecessaryBlock
+      - unslice
+      - valSwap
+      - weakCond
+  revive:
+    ignore-generated-header: false
+    severity: error
+    confidence: 0.8
+    enable-all-rules: false
+    rules:
+      - name: context-as-argument
+        severity: error
+        disabled: false
+      - name: dot-imports
+        severity: error
+        disabled: false
+      - name: error-return
+        severity: error
+        disabled: false
+      - name: error-naming
+        severity: error
+        disabled: false
+      - name: increment-decrement
+        severity: error
+        disabled: false
+      - name: var-declaration
+        severity: error
+        disabled: false
+      - name: package-comments
+        severity: error
+        disabled: false
+      - name: range
+        severity: error
+        disabled: false
+      - name: time-naming
+        severity: error
+        disabled: false
+      - name: indent-error-flow
+        severity: error
+        disabled: false
+      - name: errorf
+        severity: error
+        disabled: false
+      - name: context-keys-type
+        severity: error
+        disabled: false
+issues:
+  exclude-rules:
+    - path: _test\.go
+      linters:  # exclude some linters from running on tests files.
+        - errcheck
+        - gosec
